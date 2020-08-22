@@ -24,9 +24,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'r_6ky%gt!4kz%6k+p0*ece#^-&d(rd6zdgj4h*s&k)bji#xkty'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["anhvqle.pythonanywhere.com",]
+ALLOWED_HOSTS = ["anhvqle.pythonanywhere.com","127.0.0.1"]
 
 
 # Application definition
