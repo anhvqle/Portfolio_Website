@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anh Vuong Quang Le</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- CSS Styling -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+
+    <!-- Icon Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navfont navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav navbar-nav"><li><a class="navbar-link" href="{% url 'index' %}">About Me</a></li></ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a class="navbar-link" href="{% url 'resume' %}">Resume</a></li>
+                    <li><a class="navbar-link" href="https://www.linkedin.com/in/anh-vq-le/">LinkedIn</a></li>
+                    <li><a class="navbar-link" href="https://github.com/anhvqle">Github</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="https://github.com/anhvqle/COVID19">GoVid-U</a></li>
+                        <li><a href="https://github.com/anhvqle/SudoKu_Solver">Sudoku Solver</a></li>
+                        <li><a href="https://github.com/anhvqle/LandscapeGame">Unity Landscape Game</a></li>
+                        <li><a href="https://github.com/anhvqle/tryp">TRYP</a></li>
+                        <li><a href="https://github.com/anhvqle/First_Python_Deployment">Full Stack Web Development</a></li>
+
+                        <!-- Use this to separate a new link -->
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://github.com/anhvqle?tab=repositories"> Full Github Repositories</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <header id="header">
+        <div>
+            <img class="avatar" src="{% static "avatar.jpg" %}" alt="" />
+            <h1><strong id="colorChange">Anh V. Le</strong>, software engineer, <br/> specializes in Web and Full Stack Development <br/>
+        </div>
+    </header>
+
+    <div class="container">
+        {% block body_block %}
+        Anything outside of this will be inherited if you extend
+        {% endblock %}
+    </div>
+
+    <footer id="footer">
+        <div>
+            <ul class="icons">
+                <li><a href="https://facebook.com/anhvqle99/" class="icon brands fa fa-facebook-official"><span class="label">Facebook</span></a></li>
+                <li><a href="https://github.com/anhvqle/" class="icon brands fa fa-github"><span class="label">Github</span></a></li>
+                <li><a href="https://linkedin.com/in/anh-vq-le/" class="icon brands fa fa-linkedin-square"><span class="label">LinkedIn</span></a></li>
+                <li><a href="mailto:anh.vq.le@gmail.com" class="glyphicon glyphicon-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled</li><li>Design: Anh V. Le</li>
+            </ul>
+        </div>
+    </footer>
+
+  </body>
+  <script src="{% static 'style.js' %}"></script>
+</html>

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+  <section>
+    <h2 class="topic">About Me</h2>
+    <p class="text">I am an undergraduate student entering my third year at Washington University in St. Louis, majoring in Computer Science.
+      I am also pursuing a Master's of Science degree in Computer Science at WUSTL. I have professional working experience in
+      Web Development and Full Stack Development. In addition, I am most familiar with Java programming language, which I prefer
+      to use during coding assessment.
+    </p>
+    <a href="http://meritpages.com/anhvqle" class="btn btn-outline-secondary button">Full Portfolio</a>
+  </section>
+  <hr style="height:1px; border:none; color:#808080; background-color:#808080; margin-bottom: 30px;"/>
+
+  <section>
+    <h2 class="topic">Personal Projects </h2>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6 thumbnail">
+        <a href="https://devpost.com/software/go-vid-u" class="image thumb"><img src="{% static 'logo/GovidU.png' %}" class="round"></a>
+        <h3><a href = "https://github.com/anhvqle/COVID19">Go-Vid U</a></h3>
+        <p class="text" id="description">TechPoint Summer Opportunities for Students (S.O.S.) Challenge </p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 thumbnail">
+        <a href="{% url 'unity' %}" class="image thumb"><img src="{% static 'logo/unity.png' %}" class="round"></a>
+        <h3><a href = "http://devpost.com/software/soylent-go">Landscape Game</a></h3>
+        <p class="text" id="description">First Person View Unity Game Development</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 thumbnail">
+        <a href="https://devpost.com/software/tryp" class="image thumb"><img src="{% static 'logo/tryp.png' %}" class="round"></a>
+        <h3><a href = "https://github.com/anhvqle/tryp" style="text-decoration:none">TRYP</a></h3>
+        <p class="text" id="description">Hackathon at University of Southern California 2019</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 thumbnail">
+        <a href="https://github.com/anhvqle/OOPFinalProject" class="image thumb"><img src="{% static 'logo/TBAG.png' %}" class="round"></a>
+        <h3><a href = "https://github.com/anhvqle/OOPFinalProject">Text Based Adventure Game</a></h3>
+        <p class="text" id="description">Object Oriented Programming</p>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 thumbnail">
+        <a href="https://github.com/anhvqle/MiniCarRentalDatabase}" class="image thumb"><img src="{% static 'logo/database.png' %}" class="round"></a>
+        <h3><a href = "https://github.com/anhvqle/MiniCarRentalDatabase">Mini Car Rental Database</a></h3>
+        <p class="text" id="description">Relational Database - SQL</p>
+      </div>
+      <div class="col-lg-4 col-sm-6 thumbnail">
+        <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview" class="image thumb"><img src="{% static 'logo/kaggle.png' %}" class="round"></a>
+        <h3><a href = "http://github.com/depauwcsc232/groupb1.git">House Prices Prediction </a></h3>
+        <p class="text" id="description">Competition on <i>kaggle.com</i></p>
+      </div>
+    </div>
+    <a href="http://github.com/anhvqle" class="btn btn-outline-secondary button">View More Projects</a>
+  </section>
+  <hr style="height:1px; color:#808080; background-color:#808080;"/>
+
+  <section id="three">
+    <h2 class="topic">Resumé </h2>
+    <p class="text"><strong>Please find my resume below and leave a message if you think I am a good fit for your company!</strong></p>
+    <a href="{% url 'resume' %}" class="btn btn-outline-secondary button">View Resume</a>
+  </section>
+  <hr style="height:1px; color:#808080; background-color:#808080;"/>
+
+  <section>
+  	<h2 class="topic"><strong>Get In Touch</strong></h2>
+  	<p class="text">Send me a message if you want to connect or think I will be a good fit for your company!</p>
+  	<div class="row">
+  		<div class="form-group col-lg-8 col-sm-12">
+        <form method="post">
+          {{ form.as_p }}
+          {% csrf_token %}
+          <br/>
+          <br/>
+          <input type="submit" class = "btn btn-outline-secondary button" value="Send Messages">
+        </form>
+  		</div>
+  		<div class="col-lg-4 col-sm-12">
+  			<ul style="list-style-type: none;">
+  				<li>
+            <h3 class="glyphicon glyphicon-home"><span class="label">Address</span></h3>
+            <p class="text">
+              626 E Seminary St<br />
+  					  Greencastle, IN 46135<br />
+  					  United States
+            </p>
+  				</li>
+  				<li>
+            <h3 class="glyphicon glyphicon-earphone"><span class="label">Phone</span></h3>
+            <p class="text">
+              813-816-4209
+            </p>
+  				</li>
+  				<li>
+            <h3 class="glyphicon glyphicon-envelope"><span class="label">Email</span></h3>
+            <p class="text">
+              <a href="mailto:anh.vq.le@gmail.com" class="personal_email">anh.vq.le@gmail.com</a>
+            </p>
+  				</li>
+  			</ul>
+  		</div>
+  	</div>
+  </section>
+{% endblock %}
